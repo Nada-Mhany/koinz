@@ -6,29 +6,40 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import java.lang.*;
 
 public class OrderScreen {
  WebDriver driver;
 	//By SelectBranch = By.xpath("//*[@id=\"root\"]/div[4]/div[2]/div[1]");
 	//By OrderDiv = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/div[3]/div");
 	//String x is change with orderID from mobile app
-	
-	String x = "104650";
-	
-	By OrderDiv = By.xpath("//*[contains(text(),'"+x+"')]");
-	By AcceptBtn = By.xpath("/html/body/div[5]/div[2]/div[2]/div/div[3]/div[1]/div/button");
+public static String y;
+ public OrderScreen(AndroidDriver<AndroidElement> driver ){
+
+        this.driver = driver;
+    }
+ public OrderScreen(WebDriver driver ){
+
+     this.driver = driver;
+ }
+
+ 
+	//By OrderDiv = By.xpath("//*[contains(text(),'"+y+"')]");
+	//By OrderDiv = By.xpath("//*[contains(text(),'313972')]");
+ 		By OrderDiv = By.xpath("//*[contains(text(),'"+y+"')]");
+
+ 	By AcceptBtn = By.xpath("/html/body/div[5]/div[2]/div[2]/div/div[3]/div[1]/div/button");
 	By PreparingBtn = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[1]/a[2]/div[2]");
 	By OutForDeliveryBtn = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/div/div/div/div[2]/button");
 	By ReadyBtn = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[1]/a[3]/div[2]");
 	By Delivered = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/div/div/div/div[2]/button");
 	By NoOrder = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/div[2]");
-	public OrderScreen(WebDriver driver){
 
-        this.driver = driver;
 
-    }
 	public void Order() {
+		System.out.print(y);
 		//driver.findElement(SelectBranch).click();
 	    driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 	    driver.findElement(OrderDiv).click();

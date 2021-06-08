@@ -19,6 +19,7 @@ import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import koinz.Admin.OrderScreen;
 
 /**
  * Hello world!
@@ -34,7 +35,9 @@ public class App
     	DesiredCapabilities caps = new DesiredCapabilities();
 
     	caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Koinz");
-    	caps.setCapability(MobileCapabilityType.APP,"C:\\Users\\samar\\eclipse-workspace\\order\\app-debug.apk");
+    	//caps.setCapability(MobileCapabilityType.APP,"C:\\Users\\user\\eclipse-workspace\\Admin\\app-debug.apk");
+    	caps.setCapability(MobileCapabilityType.APP,System.getProperty("user.dir")+"\\app-debug.apk");
+
     	driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
     	driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     	LoginScreen loginscreen = new LoginScreen(driver);
@@ -63,7 +66,9 @@ public class App
     	AndroidElement OrderIDFull = driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code"));
     	assertEquals(driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code")).getText().contains("Order ID"), true);
     	System.out.println(OrderIDFull.getText());
-    	String OrderID = OrderIDFull.getText().substring(9);
-    	System.out.println(OrderID);	
-    }
+   	String OrderID = OrderIDFull.getText().substring(9);
+//  	System.out.println(OrderID);	
+ // String OrderID = "1000"; 
+  OrderScreen.y= OrderID;
+   }
 }

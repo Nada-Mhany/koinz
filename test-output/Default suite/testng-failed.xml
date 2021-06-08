@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="koinz.order.App">
+      <class name="testCases.Admin.TestBase">
         <methods>
-          <include name="OpenApp"/>
-          <include name="CreateOrder"/>
+          <include name="CompletedOrder"/>
         </methods>
-      </class> <!-- koinz.order.App -->
+      </class> <!-- testCases.Admin.TestBase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

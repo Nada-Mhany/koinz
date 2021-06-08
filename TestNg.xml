@@ -1,1 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<suite name="Regression">
+    <test name="Testing">
+         <classes>
+             	<class name="koinz.order.App" />
+				<class name="testCases.Admin.TestBase" />
+          </classes>
+     </test> <!-- Test -->
+</suite> <!-- Suite -->
