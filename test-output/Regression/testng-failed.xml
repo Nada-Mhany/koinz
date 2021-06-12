@@ -3,12 +3,12 @@
 <suite name="Failed suite [Regression]">
   <test thread-count="5" name="Testing(failed)">
     <classes>
-      <class name="koinz.order.App">
+      <class name="koinz.order.PickupWithOnlyItem">
         <methods>
           <include name="OpenApp"/>
           <include name="CreateOrder"/>
         </methods>
-      </class> <!-- koinz.order.App -->
+      </class> <!-- koinz.order.PickupWithOnlyItem -->
       <class name="testCases.Admin.TestBase">
         <methods>
           <include name="CompletedOrder"/>

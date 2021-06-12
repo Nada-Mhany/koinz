@@ -2,7 +2,7 @@
 <suite name="Regression">
     <test name="Testing">
          <classes>
-             	<class name="koinz.order.App" />
+             	<class name="koinz.order.PickupWithOnlyItem" />
 				<class name="testCases.Admin.TestBase" />
           </classes>
      </test> <!-- Test -->
