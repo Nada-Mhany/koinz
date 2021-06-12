@@ -14,15 +14,23 @@ public class OrderingMethod {
 	
 	By OrderBtn = By.id("tech.gplanet.shopx:id/tv_order_now");
 	By PickupBtn = By.id("tech.gplanet.shopx:id/cl_pickup_container");
+	By DeliveryBtn = By.id("tech.gplanet.shopx:id/cl_delivery_container");
 	
 	public OrderingMethod (AndroidDriver<AndroidElement> driver) {
 		this.driver = driver;
 	}
-	public void selectMethod() {
+	public void selectPickupMethod() {
 		
 		driver.findElement(OrderBtn).click();
 		driver.findElement(OrderBtn).click();
 		driver.findElement(PickupBtn).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+    public void selectDeliveryMethod() {
+		
+		driver.findElement(OrderBtn).click();
+		driver.findElement(OrderBtn).click();
+		driver.findElement(DeliveryBtn).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 

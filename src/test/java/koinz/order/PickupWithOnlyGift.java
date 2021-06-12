@@ -16,7 +16,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import koinz.Admin.OrderScreen;
 
-public class PickupWithOnlyGigt {
+public class PickupWithOnlyGift {
 	AndroidDriver<AndroidElement> driver;
 
 	@BeforeTest
@@ -42,7 +42,7 @@ public class PickupWithOnlyGigt {
 	    	SearchBrands searchbrand = new SearchBrands(driver);
 	    	searchbrand.selectBrand();
 	    	OrderingMethod orderingMethod = new OrderingMethod(driver);
-	    	orderingMethod.selectMethod();
+	    	orderingMethod.selectPickupMethod();
 	    	SelectBranch selectBranch = new SelectBranch(driver);
 	    	selectBranch.selectBranch();
 	    	Menu menu = new Menu(driver);

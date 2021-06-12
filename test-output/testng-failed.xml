@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="koinz.order.PickupWithOnlyGigt">
+      <class name="koinz.order.DeliveryWithOnlyItem">
         <methods>
-          <include name="CreateOrder"/>
           <include name="OpenApp"/>
+          <include name="CreateOrder"/>
         </methods>
-      </class> <!-- koinz.order.PickupWithOnlyGigt -->
+      </class> <!-- koinz.order.DeliveryWithOnlyItem -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
