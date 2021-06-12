@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Regression">
-    <test name="Testing">
-         <classes>
-             	<class name="koinz.order.PickupWithOnlyItem" />
-				<class name="testCases.Admin.TestBase" />
-          </classes>
-     </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<test name="PickupWithOnlyItem">
+		<classes>
+			<class name="appTestCases.PickupWithOnlyItem" />
+			<class name="webTestCases.AcceptOrderCashier" />
+		</classes>
+	</test>
+	<test name="PickupWithOnlyGift">
+		<classes>
+			<class name="appTestCases.PickupWithOnlyGift" />
+			<class name="webTestCases.AcceptOrderCashier" />
+		</classes>
+	</test>
+	<test name="PickupWithGiftAndItem">
+		<classes>
+			<class name="appTestCases.PickupWithGiftAndItem" />
+			<class name="webTestCases.AcceptOrderCashier" />
+		</classes>
+	</test>
+	<test name="DeliveryWithOnlyItem">
+		<classes>
+			<class name="appTestCases.DeliveryWithOnlyItem" />
+			<class name="webTestCases.AcceptOrderCashier" />
+		</classes>
+	</test>
+</suite> 

@@ -3,17 +3,11 @@
 <suite name="Failed suite [Regression]">
   <test thread-count="5" name="Testing(failed)">
     <classes>
-      <class name="koinz.order.PickupWithOnlyItem">
-        <methods>
-          <include name="OpenApp"/>
-          <include name="CreateOrder"/>
-        </methods>
-      </class> <!-- koinz.order.PickupWithOnlyItem -->
-      <class name="testCases.Admin.TestBase">
+      <class name="webTestCases.AcceptOrderCashier">
         <methods>
           <include name="CompletedOrder"/>
         </methods>
-      </class> <!-- testCases.Admin.TestBase -->
+      </class> <!-- webTestCases.AcceptOrderCashier -->
     </classes>
   </test> <!-- Testing(failed) -->
 </suite> <!-- Failed suite [Regression] -->
