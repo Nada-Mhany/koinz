@@ -1,29 +1,38 @@
 package appScreens;
 
+
 import org.openqa.selenium.By;
+
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
 public class SelectZones {
 	AndroidDriver<AndroidElement> driver;
-
-	By ContinueBtn = By.id("tech.gplanet.shopx:id/tv_continue");
-	By SavedZone = By.id("tech.gplanet.shopx:id/tv_delivery_sub_district");
+	
+//	By ContinueBtn = By.id("tech.gplanet.shopx:id/tv_continue");
+//	By SavedZone = By.id("tech.gplanet.shopx:id/tv_delivery_sub_district");
 	By ChangeBtn = By.id("tech.gplanet.shopx:id/tv_change");
-	By ChooseZone = By.xpath(
-			"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]");
-
+	By ChooseZone = By.xpath("//android.widget.TextView[contains(@text, '23rd July')]");
+	//By SearchZone = By.id("tech.gplanet.shopx:id/et_search_locations");
+	//By Zone = By.id("tech.gplanet.shopx:id/tv_place_name");
+	//By SearchLocation = By.id("ttech.gplanet.shopx:id/et_search_locations");
+	//By Location = By.id("tech.gplanet.shopx:id/tv_place_name");
+	
+	
 	public SelectZones(AndroidDriver<AndroidElement> driver) {
 		this.driver = driver;
 	}
 
 	public void SelectZone() {
-
-		driver.findElement(ChangeBtn).click();
-		;
-		driver.findElement(ChooseZone).click();
-		// driver.findElement(ContinueBtn).click();
-
-	}
+		try
+	    {
+			driver.findElement(ChangeBtn).click();
+	    }
+	    catch(Exception e)
+	    {
+	    	driver.findElement(ChooseZone).click();
+	    }
+	//driver.findElement(ChangeBtn).click();
+}
 }

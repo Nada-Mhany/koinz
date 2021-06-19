@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -32,6 +33,8 @@ public class OrderScreen {
 	By ReadyBtn = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[1]/a[3]/div[2]");
 	By Delivered = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/div/div/div/div[2]/button");
 	By NoOrder = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/div[2]");
+	By OrderManagerBtn = By.className("dropdown");
+	By LoyaltyManagerBtn = By.xpath("//span[contains(text(),'Loyalty manager')]");
 
 	public void Order() {
 		// System.out.print(y);
@@ -48,6 +51,11 @@ public class OrderScreen {
 		driver.findElement(ReadyBtn).click();
 		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 		driver.findElement(Delivered).click();
+	}
+
+	public void SwitchToLoyalty() {
+		driver.findElement(OrderManagerBtn).click();
+		driver.findElement(LoyaltyManagerBtn).click();
 
 	}
 

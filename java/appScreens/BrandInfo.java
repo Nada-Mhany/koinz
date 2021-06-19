@@ -2,7 +2,6 @@ package appScreens;
 
 import org.openqa.selenium.By;
 
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 

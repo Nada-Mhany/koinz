@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="appTestCases.DeliveryWithOnlyGift">
+      <class name="webTestCases.AddOfflinePoints">
         <methods>
-          <include name="OpenApp"/>
-          <include name="CheckPointsAfterRedeem"/>
+          <include name="CheckAddOfflinePoints"/>
         </methods>
-      </class> <!-- appTestCases.DeliveryWithOnlyGift -->
+      </class> <!-- webTestCases.AddOfflinePoints -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
