@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="appTestCases.PickupWithOnlyItem">
+      <class name="appTestCases.DeliveryWithOnlyGift">
         <methods>
-          <include name="CreateOrder"/>
           <include name="OpenApp"/>
+          <include name="CheckPointsAfterRedeem"/>
         </methods>
-      </class> <!-- appTestCases.PickupWithOnlyItem -->
+      </class> <!-- appTestCases.DeliveryWithOnlyGift -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

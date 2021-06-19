@@ -25,4 +25,33 @@
 			<class name="webTestCases.AcceptOrderCashier" />
 		</classes>
 	</test>
+		<test name="DeliveryWithOnlyGift">
+		<classes>
+			<class name="appTestCases.DeliveryWithOnlyItem" />
+			<class name="webTestCases.AcceptOrderCashier" />
+		</classes>
+	</test> 
+		<test name="DeliveryWithGiftAndItem">
+		<classes>
+			<class name="appTestCases.DeliveryWithOnlyItem" />
+			<class name="webTestCases.AcceptOrderCashier" />
+		</classes>
+	</test> 
+	<!-- 	<test name="DeliveryWithOnlyGift">
+		<classes>
+			<class name="appTestCases.DeliveryWithOnlyGift">
+			<methods>
+			<include name="CreateOrder" />
+			<exclude name ="CheckPointsAfterRedeem"/>
+			</methods>
+			</class>
+			<class name="webTestCases.AcceptOrderCashier" />
+			<class name="appTestCases.DeliveryWithOnlyGift">
+			<methods>
+			<include name="CheckPointsAfterRedeem" />
+			<exclude name ="CreateOrder"/>
+			</methods>
+			</class>
+		</classes>
+	</test> -->
 </suite> 
