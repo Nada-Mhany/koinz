@@ -25,14 +25,15 @@ public class OrderScreen {
 
 	// By OrderDiv = By.xpath("//*[contains(text(),'"+y+"')]");
 	// By OrderDiv = By.xpath("//*[contains(text(),'313972')]");
-	By OrderDiv = By.xpath("//*[contains(text(),'" + y + "')]");
+	String z = "382626";
+	By OrderDiv = By.xpath("//*[contains(text(),'" + z + "')]");
 
 	By AcceptBtn = By.xpath("/html/body/div[5]/div[2]/div[2]/div/div[3]/div[1]/div/button");
 	By PreparingBtn = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[1]/a[2]/div[2]");
 	By OutForDeliveryBtn = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/div/div/div/div[2]/button");
 	By ReadyBtn = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[1]/a[3]/div[2]");
 	By Delivered = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/div/div/div/div[2]/button");
-	By NoOrder = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/div[2]");
+	By NoOrder = By.xpath("//div[contains(text(),'There are no recent orders')]");
 	By OrderManagerBtn = By.className("dropdown");
 	By LoyaltyManagerBtn = By.xpath("//span[contains(text(),'Loyalty manager')]");
 

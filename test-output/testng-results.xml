@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-19T21:36:40 EET" name="Default suite" finished-at="2021-06-19T21:36:46 EET" duration-ms="6068">
+  <suite started-at="2021-06-27T13:41:12 EET" name="Default suite" finished-at="2021-06-27T13:41:21 EET" duration-ms="8763">
     <groups>
     </groups>
-    <test started-at="2021-06-19T21:36:40 EET" name="Default test" finished-at="2021-06-19T21:36:46 EET" duration-ms="6068">
-      <class name="webTestCases.AddOfflinePoints">
-        <test-method signature="CheckAddOfflinePoints()[pri:0, instance:webTestCases.AddOfflinePoints@4b5d6a01]" started-at="2021-06-19T21:36:40 EET" name="CheckAddOfflinePoints" finished-at="2021-06-19T21:36:46 EET" duration-ms="6028" status="PASS">
+    <test started-at="2021-06-27T13:41:12 EET" name="Default test" finished-at="2021-06-27T13:41:21 EET" duration-ms="8763">
+      <class name="webTestCases.AcceptOrderCashier">
+        <test-method signature="CompletedOrder()[pri:0, instance:webTestCases.AcceptOrderCashier@44821a96]" started-at="2021-06-27T13:41:13 EET" name="CompletedOrder" finished-at="2021-06-27T13:41:21 EET" duration-ms="8733" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckAddOfflinePoints -->
-      </class> <!-- webTestCases.AddOfflinePoints -->
+        </test-method> <!-- CompletedOrder -->
+      </class> <!-- webTestCases.AcceptOrderCashier -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

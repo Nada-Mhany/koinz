@@ -18,9 +18,18 @@ public class LoginScreen {
 	By Password = By.id("tech.gplanet.shopx:id/et_password");
 	By LoginBtn = MobileBy.AndroidUIAutomator("text(\"Login\")");
 	By PopUp = MobileBy.AndroidUIAutomator("text(\"ALLOW\")");
+	By SideMenu = By.id("tech.gplanet.shopx:id/iv_menu_icon");
+	By PointHistory = By.id("tech.gplanet.shopx:id/cl_points_history_container");
+	
 
 	public LoginScreen(AndroidDriver<AndroidElement> driver) {
 		this.driver = driver;
+	}
+	public void NavigateSideMenu() {
+		driver.findElement(SideMenu).click();
+	}
+	public void NavigatePointHistory() {
+		driver.findElement(PointHistory).click();
 	}
 
 	public void CountrySelect() {
