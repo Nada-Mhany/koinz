@@ -23,11 +23,12 @@ public class LoyaltyScreen {
 	By SendPointsBtn = By.xpath("//body/div[@id='root']/div[3]/div[2]/div[1]/div[1]/div[2]/div[2]/button[1]");
 	By Customer = By.xpath("//body/div[@id='root']/div[3]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]");
 	By Points = By.xpath("//body/div[@id='root']/div[3]/div[3]/div[1]/div[1]/div[1]/div[1]/div[3]");
-
+	int MoneyAdded = 100;
+	public int PointsAdded = (MoneyAdded *52)/100;
 	public void AddOfflinePoints() {
 		driver.findElement(ManagePointsBtn).click();
 		driver.findElement(PhoneNumber).sendKeys("01061334326");
-		driver.findElement(Receipt).sendKeys("100");
+		driver.findElement(Receipt).sendKeys(String.valueOf(MoneyAdded));
 		driver.findElement(SendPointsBtn).click();
 	}
 
