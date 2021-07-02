@@ -1,4 +1,4 @@
-package appScreens;
+package androidScreens;
 
 import java.util.concurrent.TimeUnit;
 

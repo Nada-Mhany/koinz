@@ -10,8 +10,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import appScreens.LoginScreen;
-import appScreens.PointsHistory;
+import androidScreens.LoginScreen;
+import androidScreens.PointsHistory;
 import cashier.LoyaltyScreen;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;

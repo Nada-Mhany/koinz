@@ -1,4 +1,4 @@
-package appScreens;
+package androidScreens;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;

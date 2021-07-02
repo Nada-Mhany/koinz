@@ -1,5 +1,15 @@
 package androidTestCases;
 import org.testng.annotations.Test;
+
+import androidScreens.Basket;
+import androidScreens.BrandInfo;
+import androidScreens.Checkout;
+import androidScreens.LoginScreen;
+import androidScreens.Menu;
+import androidScreens.OrderingMethod;
+import androidScreens.SearchBrands;
+import androidScreens.SelectZones;
+
 import static org.testng.Assert.assertEquals;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -7,14 +17,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
-import appScreens.Basket;
-import appScreens.BrandInfo;
-import appScreens.Checkout;
-import appScreens.LoginScreen;
-import appScreens.Menu;
-import appScreens.OrderingMethod;
-import appScreens.SearchBrands;
-import appScreens.SelectZones;
+
 import cashier.OrderScreen;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;

@@ -1,4 +1,4 @@
-package appScreens;
+package androidScreens;
 
 import org.openqa.selenium.By;
 import io.appium.java_client.MobileBy;
