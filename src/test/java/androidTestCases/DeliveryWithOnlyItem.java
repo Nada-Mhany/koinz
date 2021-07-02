@@ -1,6 +1,4 @@
-package appTestCases;
-
-import static org.testng.Assert.assertEquals;
+package androidTestCases;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,13 +15,13 @@ import appScreens.LoginScreen;
 import appScreens.Menu;
 import appScreens.OrderingMethod;
 import appScreens.SearchBrands;
-import appScreens.SelectBranchs;
+import appScreens.SelectZones;
 import cashier.OrderScreen;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class PickupWithGiftAndItem {
+public class DeliveryWithOnlyItem {
 	AndroidDriver<AndroidElement> driver;
 
 	@BeforeTest
@@ -39,32 +37,31 @@ public class PickupWithGiftAndItem {
 		LoginScreen loginscreen = new LoginScreen(driver);
 		loginscreen.CountrySelect();
 		loginscreen.Login();
+
 	}
 
 	@Test
 	public void CreateOrder() {
+		
 
 		SearchBrands searchbrand = new SearchBrands(driver);
 		searchbrand.SelectBrand();
 		OrderingMethod orderingMethod = new OrderingMethod(driver);
-		orderingMethod.SelectPickupMethod();
-		SelectBranchs selectBranch = new SelectBranchs(driver);
-		selectBranch.SelectBranch();
+		orderingMethod.SelectDeliveryMethod();
+		SelectZones selectZone = new SelectZones(driver);
+		selectZone.SelectZone();
 		Menu menu = new Menu(driver);
 		menu.AddMenuItem();
-		menu.AddGift();
 		menu.ViewBasket();
+
 		Basket basket = new Basket(driver);
 		basket.ViewOrder();
 		Checkout checkout = new Checkout(driver);
 		checkout.Order();
 		AndroidElement OrderIDFull = driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code"));
-		assertEquals(driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code")).getText().contains("Order ID"),
-				true);
 		System.out.println(OrderIDFull.getText());
-		String OrderID = OrderIDFull.getText().substring(9);
-//	  	System.out.println(OrderID);	
-		// String OrderID = "1000";
+		String OrderID = OrderIDFull.getText();
+
 		OrderScreen.y = OrderID;
 	}
 }

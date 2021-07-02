@@ -1,4 +1,4 @@
-package appTestCases;
+package androidTestCases;
 
 import static org.testng.Assert.assertEquals;
 
@@ -23,7 +23,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class PickupWithPromo {
+public class PickupWithGiftAndItem {
 	AndroidDriver<AndroidElement> driver;
 
 	@BeforeTest
@@ -39,8 +39,8 @@ public class PickupWithPromo {
 		LoginScreen loginscreen = new LoginScreen(driver);
 		loginscreen.CountrySelect();
 		loginscreen.Login();
-
 	}
+
 	@Test
 	public void CreateOrder() {
 
@@ -52,19 +52,18 @@ public class PickupWithPromo {
 		selectBranch.SelectBranch();
 		Menu menu = new Menu(driver);
 		menu.AddMenuItem();
+		menu.AddGift();
 		menu.ViewBasket();
-
 		Basket basket = new Basket(driver);
 		basket.ViewOrder();
 		Checkout checkout = new Checkout(driver);
-		checkout.AddPromo();
 		checkout.Order();
 		AndroidElement OrderIDFull = driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code"));
 		assertEquals(driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code")).getText().contains("Order ID"),
 				true);
 		System.out.println(OrderIDFull.getText());
 		String OrderID = OrderIDFull.getText().substring(9);
-//  	System.out.println(OrderID);	
+//	  	System.out.println(OrderID);	
 		// String OrderID = "1000";
 		OrderScreen.y = OrderID;
 	}

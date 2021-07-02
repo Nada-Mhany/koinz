@@ -1,4 +1,6 @@
-package appTestCases;
+package androidTestCases;
+
+import static org.testng.Assert.assertEquals;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -9,19 +11,19 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import appScreens.Basket;
-import appScreens.Checkout;
-import appScreens.LoginScreen;
-import appScreens.Menu;
-import appScreens.OrderingMethod;
-import appScreens.SearchBrands;
-import appScreens.SelectZones;
+import androidScreens.Basket;
+import androidScreens.Checkout;
+import androidScreens.LoginScreen;
+import androidScreens.Menu;
+import androidScreens.OrderingMethod;
+import androidScreens.SearchBrands;
+import androidScreens.SelectBranchs;
 import cashier.OrderScreen;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class DeliveryWithOnlyItem {
+public class PickupWithOnlyGift {
 	AndroidDriver<AndroidElement> driver;
 
 	@BeforeTest
@@ -42,16 +44,14 @@ public class DeliveryWithOnlyItem {
 
 	@Test
 	public void CreateOrder() {
-		
-
 		SearchBrands searchbrand = new SearchBrands(driver);
 		searchbrand.SelectBrand();
 		OrderingMethod orderingMethod = new OrderingMethod(driver);
-		orderingMethod.SelectDeliveryMethod();
-		SelectZones selectZone = new SelectZones(driver);
-		selectZone.SelectZone();
+		orderingMethod.SelectPickupMethod();
+		SelectBranchs selectBranch = new SelectBranchs(driver);
+		selectBranch.SelectBranch();
 		Menu menu = new Menu(driver);
-		menu.AddMenuItem();
+		menu.AddGift();
 		menu.ViewBasket();
 
 		Basket basket = new Basket(driver);
@@ -59,9 +59,12 @@ public class DeliveryWithOnlyItem {
 		Checkout checkout = new Checkout(driver);
 		checkout.Order();
 		AndroidElement OrderIDFull = driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code"));
+		assertEquals(driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code")).getText().contains("Order ID"),
+				true);
 		System.out.println(OrderIDFull.getText());
-		String OrderID = OrderIDFull.getText();
-
+		String OrderID = OrderIDFull.getText().substring(9);
+//	  	System.out.println(OrderID);	
+		// String OrderID = "1000";
 		OrderScreen.y = OrderID;
 	}
 }
