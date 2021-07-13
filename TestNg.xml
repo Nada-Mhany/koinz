@@ -3,7 +3,7 @@
 <suite name="Regression">
 	<test name="PickupWithOnlyItem">
 		<classes>
-			<class name="appTestCases.GetGiftCode" />
+			<class name="androidTestCases.GetGiftCode" />
 			<class name="webTestCases.RedeemGift" />
 		</classes>
 	</test>

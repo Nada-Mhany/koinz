@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-13T14:43:33 EET" name="Regression" finished-at="2021-07-13T14:44:38 EET" duration-ms="64678">
+  <suite started-at="2021-07-13T15:34:37 EET" name="Regression" finished-at="2021-07-13T15:35:41 EET" duration-ms="64901">
     <groups>
     </groups>
-    <test started-at="2021-07-13T14:43:33 EET" name="PickupWithOnlyItem" finished-at="2021-07-13T14:44:38 EET" duration-ms="64678">
+    <test started-at="2021-07-13T15:34:37 EET" name="PickupWithOnlyItem" finished-at="2021-07-13T15:35:41 EET" duration-ms="64901">
       <class name="webTestCases.RedeemGift">
-        <test-method signature="Redeem()[pri:0, instance:webTestCases.RedeemGift@c33b74f]" started-at="2021-07-13T14:44:32 EET" name="Redeem" finished-at="2021-07-13T14:44:38 EET" duration-ms="6440" status="PASS">
+        <test-method signature="Redeem()[pri:0, instance:webTestCases.RedeemGift@c33b74f]" started-at="2021-07-13T15:35:36 EET" name="Redeem" finished-at="2021-07-13T15:35:41 EET" duration-ms="5345" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Redeem -->
       </class> <!-- webTestCases.RedeemGift -->
-      <class name="appTestCases.GetGiftCode">
-        <test-method is-config="true" signature="OpenApp()[pri:0, instance:appTestCases.GetGiftCode@481a996b]" started-at="2021-07-13T14:43:33 EET" name="OpenApp" finished-at="2021-07-13T14:44:19 EET" duration-ms="45269" status="PASS">
+      <class name="androidTestCases.GetGiftCode">
+        <test-method is-config="true" signature="OpenApp()[pri:0, instance:androidTestCases.GetGiftCode@481a996b]" started-at="2021-07-13T15:34:37 EET" name="OpenApp" finished-at="2021-07-13T15:35:23 EET" duration-ms="45998" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApp -->
-        <test-method signature="NavigateToGifts()[pri:0, instance:appTestCases.GetGiftCode@481a996b]" started-at="2021-07-13T14:44:19 EET" name="NavigateToGifts" finished-at="2021-07-13T14:44:32 EET" duration-ms="12922" status="PASS">
+        <test-method signature="NavigateToGifts()[pri:0, instance:androidTestCases.GetGiftCode@481a996b]" started-at="2021-07-13T15:35:23 EET" name="NavigateToGifts" finished-at="2021-07-13T15:35:36 EET" duration-ms="13511" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NavigateToGifts -->
-      </class> <!-- appTestCases.GetGiftCode -->
+      </class> <!-- androidTestCases.GetGiftCode -->
     </test> <!-- PickupWithOnlyItem -->
   </suite> <!-- Regression -->
 </testng-results>
