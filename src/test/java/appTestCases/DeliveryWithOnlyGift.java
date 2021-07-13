@@ -60,7 +60,7 @@ public class DeliveryWithOnlyGift {
 		AndroidElement OrderIDFull = driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code"));
 		System.out.println(OrderIDFull.getText());
 		String OrderID = OrderIDFull.getText();
-		OrderScreen.y = OrderID;
+		OrderScreen.OrderCode = OrderID;
 
 	}
 	 @Test

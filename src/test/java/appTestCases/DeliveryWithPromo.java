@@ -62,7 +62,7 @@ public class DeliveryWithPromo {
 		System.out.println(OrderIDFull.getText());
 		String OrderID = OrderIDFull.getText();
 
-		OrderScreen.y = OrderID;
+		OrderScreen.OrderCode = OrderID;
 		
 		
 }

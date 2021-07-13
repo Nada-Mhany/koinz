@@ -13,7 +13,8 @@ public class OrderScreen {
 	// By SelectBranch = By.xpath("//*[@id=\"root\"]/div[4]/div[2]/div[1]");
 	// By OrderDiv = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[2]/div[3]/div");
 	// String x is change with orderID from mobile app
-	public static String y;
+	public static String OrderCode;
+	public static String CodeOfGift;
 
 	public OrderScreen(AndroidDriver<AndroidElement> driver) {
 		this.driver = driver;
@@ -25,8 +26,8 @@ public class OrderScreen {
 
 	// By OrderDiv = By.xpath("//*[contains(text(),'"+y+"')]");
 	// By OrderDiv = By.xpath("//*[contains(text(),'313972')]");
-	String z = "382626";
-	By OrderDiv = By.xpath("//*[contains(text(),'" + z + "')]");
+//	String z = "382626";
+	By OrderDiv = By.xpath("//*[contains(text(),'" + OrderCode + "')]");
 
 	By AcceptBtn = By.xpath("/html/body/div[5]/div[2]/div[2]/div/div[3]/div[1]/div/button");
 	By PreparingBtn = By.xpath("//*[@id=\"root\"]/div[3]/div[2]/div[1]/a[2]/div[2]");
@@ -36,6 +37,10 @@ public class OrderScreen {
 	By NoOrder = By.xpath("//div[contains(text(),'There are no recent orders')]");
 	By OrderManagerBtn = By.className("dropdown");
 	By LoyaltyManagerBtn = By.xpath("//span[contains(text(),'Loyalty manager')]");
+	By RedeemGiftScreen = By.xpath("//a[contains(text(),'Redeem Gifts')]");
+	By RedeemCodeField = By.xpath("//body/div[@id='root']/div[3]/div[2]/div[1]/div[1]/div[2]/div[2]/form[1]/input[1]");
+	By CheckCodeBtn = By.xpath("//button[contains(text(),'Check the code')]");
+	By RedeemGiftBtn = By.xpath("//p[contains(text(),'Redeem gift')]");
 
 	public void Order() {
 		// System.out.print(y);
@@ -52,6 +57,7 @@ public class OrderScreen {
 		driver.findElement(ReadyBtn).click();
 		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 		driver.findElement(Delivered).click();
+
 	}
 
 	public void SwitchToLoyalty() {
@@ -63,5 +69,20 @@ public class OrderScreen {
 	public String NoOrderText() {
 		String Text = driver.findElement(NoOrder).getText();
 		return Text;
+	}
+	public void SwitchRedeemgift() {
+		driver.findElement(RedeemGiftScreen).click();
+
+	}
+	public void EnterRedeemCode(String x) {
+		driver.findElement(RedeemCodeField).click();
+		//Hanshoooooooooooooooooof
+		
+		driver.findElement(RedeemCodeField).sendKeys(x);
+		System.out.print(CodeOfGift);
+		driver.findElement(CheckCodeBtn).click();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.findElement(RedeemGiftBtn).click();
+
 	}
 }

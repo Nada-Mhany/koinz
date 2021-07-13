@@ -58,6 +58,7 @@ public class PickupWithOnlyItem {
 		SelectBranchs selectBranch = new SelectBranchs(driver);
 		selectBranch.SelectBranch();
 		Menu menu = new Menu(driver);
+		menu.SearchMenuItem();
 		menu.AddMenuItem();
 		menu.ViewBasket();
 
@@ -70,8 +71,18 @@ public class PickupWithOnlyItem {
 				true);
 		System.out.println(OrderIDFull.getText());
 		String OrderID = OrderIDFull.getText().substring(9);
+		OrderScreen.OrderCode = OrderID;
+
 		// System.out.println(OrderID);
 		// String OrderID = "1000";
-		OrderScreen.y = OrderID;
+//		OrderScreen.OrderCode = OrderID;
+//		String OrderSummary = "Order summary";
+//		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+OrderSummary+"\").instance(0))").click();
+//		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"Total\").instance(0))").click();
+//
+//		AndroidElement OrderPoints = driver.findElement(By.id("tech.gplanet.shopx:id/tv_added_points"));
+//		System.out.println(OrderPoints.getText());
+		//To do: OrderPoints should be printed then assert with the class OnlinePointRec
+
 	}
 }

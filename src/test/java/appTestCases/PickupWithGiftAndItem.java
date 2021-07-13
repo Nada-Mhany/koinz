@@ -65,6 +65,6 @@ public class PickupWithGiftAndItem {
 		String OrderID = OrderIDFull.getText().substring(9);
 //	  	System.out.println(OrderID);	
 		// String OrderID = "1000";
-		OrderScreen.y = OrderID;
+		OrderScreen.OrderCode = OrderID;
 	}
 }

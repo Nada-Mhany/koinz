@@ -62,6 +62,6 @@ public class DeliveryWithOnlyItem {
 		System.out.println(OrderIDFull.getText());
 		String OrderID = OrderIDFull.getText();
 
-		OrderScreen.y = OrderID;
+		OrderScreen.OrderCode = OrderID;
 	}
 }

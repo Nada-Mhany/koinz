@@ -3,86 +3,17 @@
 <suite name="Failed suite [Regression]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="PickupWithOnlyItem(failed)">
     <classes>
-      <class name="webTestCases.AcceptOrderCashier">
+      <class name="appTestCases.GetGiftCode">
         <methods>
-          <include name="CompletedOrder"/>
+          <include name="OpenApp"/>
+          <include name="NavigateToGifts"/>
         </methods>
-      </class> <!-- webTestCases.AcceptOrderCashier -->
+      </class> <!-- appTestCases.GetGiftCode -->
+      <class name="webTestCases.RedeemGift">
+        <methods>
+          <include name="Redeem"/>
+        </methods>
+      </class> <!-- webTestCases.RedeemGift -->
     </classes>
   </test> <!-- PickupWithOnlyItem(failed) -->
-  <test thread-count="5" name="PickupWithOnlyGift(failed)">
-    <classes>
-      <class name="appTestCases.PickupWithOnlyGift">
-        <methods>
-          <include name="OpenApp"/>
-          <include name="CreateOrder"/>
-        </methods>
-      </class> <!-- appTestCases.PickupWithOnlyGift -->
-      <class name="webTestCases.AcceptOrderCashier">
-        <methods>
-          <include name="CompletedOrder"/>
-        </methods>
-      </class> <!-- webTestCases.AcceptOrderCashier -->
-    </classes>
-  </test> <!-- PickupWithOnlyGift(failed) -->
-  <test thread-count="5" name="PickupWithGiftAndItem(failed)">
-    <classes>
-      <class name="webTestCases.AcceptOrderCashier">
-        <methods>
-          <include name="CompletedOrder"/>
-        </methods>
-      </class> <!-- webTestCases.AcceptOrderCashier -->
-      <class name="appTestCases.PickupWithGiftAndItem">
-        <methods>
-          <include name="CreateOrder"/>
-          <include name="OpenApp"/>
-        </methods>
-      </class> <!-- appTestCases.PickupWithGiftAndItem -->
-    </classes>
-  </test> <!-- PickupWithGiftAndItem(failed) -->
-  <test thread-count="5" name="DeliveryWithOnlyItem(failed)">
-    <classes>
-      <class name="appTestCases.DeliveryWithOnlyItem">
-        <methods>
-          <include name="CreateOrder"/>
-          <include name="OpenApp"/>
-        </methods>
-      </class> <!-- appTestCases.DeliveryWithOnlyItem -->
-      <class name="webTestCases.AcceptOrderCashier">
-        <methods>
-          <include name="CompletedOrder"/>
-        </methods>
-      </class> <!-- webTestCases.AcceptOrderCashier -->
-    </classes>
-  </test> <!-- DeliveryWithOnlyItem(failed) -->
-  <test thread-count="5" name="DeliveryWithOnlyGift(failed)">
-    <classes>
-      <class name="appTestCases.DeliveryWithOnlyItem">
-        <methods>
-          <include name="CreateOrder"/>
-          <include name="OpenApp"/>
-        </methods>
-      </class> <!-- appTestCases.DeliveryWithOnlyItem -->
-      <class name="webTestCases.AcceptOrderCashier">
-        <methods>
-          <include name="CompletedOrder"/>
-        </methods>
-      </class> <!-- webTestCases.AcceptOrderCashier -->
-    </classes>
-  </test> <!-- DeliveryWithOnlyGift(failed) -->
-  <test thread-count="5" name="DeliveryWithGiftAndItem(failed)">
-    <classes>
-      <class name="appTestCases.DeliveryWithOnlyItem">
-        <methods>
-          <include name="CreateOrder"/>
-          <include name="OpenApp"/>
-        </methods>
-      </class> <!-- appTestCases.DeliveryWithOnlyItem -->
-      <class name="webTestCases.AcceptOrderCashier">
-        <methods>
-          <include name="CompletedOrder"/>
-        </methods>
-      </class> <!-- webTestCases.AcceptOrderCashier -->
-    </classes>
-  </test> <!-- DeliveryWithGiftAndItem(failed) -->
 </suite> <!-- Failed suite [Regression] -->

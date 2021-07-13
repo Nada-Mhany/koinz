@@ -3,6 +3,12 @@
 <suite name="Regression">
 	<test name="PickupWithOnlyItem">
 		<classes>
+			<class name="appTestCases.GetGiftCode" />
+			<class name="webTestCases.RedeemGift" />
+		</classes>
+	</test>
+	<!-- <test name="PickupWithOnlyItem">
+		<classes>
 			<class name="appTestCases.PickupWithOnlyItem" />
 			<class name="webTestCases.AcceptOrderCashier" />
 		</classes>
@@ -36,7 +42,7 @@
 			<class name="appTestCases.DeliveryWithOnlyItem" />
 			<class name="webTestCases.AcceptOrderCashier" />
 		</classes>
-	</test> 
+	</test>  -->
 	<!-- 	<test name="DeliveryWithOnlyGift">
 		<classes>
 			<class name="appTestCases.DeliveryWithOnlyGift">

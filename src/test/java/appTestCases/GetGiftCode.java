@@ -4,26 +4,22 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import appScreens.Basket;
-import appScreens.Checkout;
 import appScreens.LoginScreen;
 import appScreens.Menu;
-import appScreens.OrderingMethod;
 import appScreens.SearchBrands;
-import appScreens.SelectZones;
 import cashier.OrderScreen;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import webTestCases.RedeemGift;
 
-public class DeliveryWithGiftAndItem {
+public class GetGiftCode {
+	public static String test;
 	AndroidDriver<AndroidElement> driver;
-
 	@BeforeTest
 	public void OpenApp() throws MalformedURLException {
 		DesiredCapabilities caps = new DesiredCapabilities();
@@ -37,32 +33,18 @@ public class DeliveryWithGiftAndItem {
 		LoginScreen loginscreen = new LoginScreen(driver);
 		loginscreen.CountrySelect();
 		loginscreen.Login();
+		}
+		@Test
+		public void NavigateToGifts() {
 
-	}
-
-	@Test
-	public void CreateOrder() {
-
-		SearchBrands searchbrand = new SearchBrands(driver);
-		searchbrand.SelectBrand();
-		OrderingMethod orderingMethod = new OrderingMethod(driver);
-		orderingMethod.SelectDeliveryMethod();
-		SelectZones selectZone = new SelectZones(driver);
-		selectZone.SelectZone();
-		Menu menu = new Menu(driver);
-		menu.AddMenuItem();
-		menu.AddGift();
-		menu.ViewBasket();
-
-		Basket basket = new Basket(driver);
-		basket.ViewOrder();
-		Checkout checkout = new Checkout(driver);
-		checkout.Order();
-		AndroidElement OrderIDFull = driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code"));
-		System.out.println(OrderIDFull.getText());
-		String OrderID = OrderIDFull.getText();
-
-		OrderScreen.OrderCode = OrderID;
-	}
-}
+			SearchBrands searchbrand = new SearchBrands(driver);
+			searchbrand.SelectBrand();
+			Menu menu = new Menu(driver);
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			menu.GiftClick();
+			menu.GetGiftCode();
+			System.out.print(menu.GetGiftCode());
+			//OrderScreen.CodeOfGift = test;
+			RedeemGift.CodeOfGift = menu.GetGiftCode();
+	}}
 

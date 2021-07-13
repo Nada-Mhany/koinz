@@ -1,15 +1,11 @@
 package appTestCases;
-
 import static org.testng.Assert.assertEquals;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import appScreens.LoginScreen;
 import appScreens.PointsHistory;
 import cashier.LoyaltyScreen;
@@ -17,7 +13,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class PointReceiver {
+public class OfflinePointReceiver {
 	AndroidDriver<AndroidElement> driver;
 
 	@BeforeTest
@@ -35,6 +31,7 @@ public class PointReceiver {
 		loginscreen.Login();
 
 	}
+	//This Test should be run after adding offline points 
 	@Test
 	public void CheckReceivedPoints () {
 		LoginScreen loginscreen = new LoginScreen(driver);
