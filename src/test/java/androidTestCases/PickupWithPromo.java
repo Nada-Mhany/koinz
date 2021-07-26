@@ -18,7 +18,6 @@ import androidScreens.Menu;
 import androidScreens.OrderingMethod;
 import androidScreens.SearchBrands;
 import androidScreens.SelectBranchs;
-import androidScreens.SelectZones;
 import cashier.OrderScreen;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;

@@ -13,7 +13,6 @@ import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
-import iosScreens.LoginScreen;
 
 public class PickupWithOnlyItem {
 	
