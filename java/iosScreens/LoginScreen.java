@@ -5,9 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileBy.ByAccessibilityId;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
+
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 

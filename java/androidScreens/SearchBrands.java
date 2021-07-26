@@ -22,8 +22,8 @@ public class SearchBrands {
 
 		driver.findElement(SearchBar).click();
 		driver.findElement(SearchLocation).click();
-		driver.findElement(SearchLocation).sendKeys("Space");
 		WebDriverWait wait = new WebDriverWait(driver, 3000);
+		driver.findElement(SearchLocation).sendKeys("Space");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SelectBrand));
 		driver.findElement(SelectBrand).click();
 

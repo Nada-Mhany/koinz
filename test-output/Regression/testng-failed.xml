@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Regression]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="PickupWithOnlyItem(failed)">
+  <test thread-count="5" name="PickupWithOnlyItemV10(failed)">
     <classes>
-      <class name="appTestCases.GetGiftCode">
+      <class name="androidV10TestCases.PickupWithOnlyItem">
         <methods>
+          <include name="CreateOrder"/>
           <include name="OpenApp"/>
-          <include name="NavigateToGifts"/>
         </methods>
-      </class> <!-- appTestCases.GetGiftCode -->
-      <class name="webTestCases.RedeemGift">
+      </class> <!-- androidV10TestCases.PickupWithOnlyItem -->
+      <class name="webTestCases.AcceptOrderCashier">
         <methods>
-          <include name="Redeem"/>
+          <include name="CompletedOrder"/>
         </methods>
-      </class> <!-- webTestCases.RedeemGift -->
+      </class> <!-- webTestCases.AcceptOrderCashier -->
     </classes>
-  </test> <!-- PickupWithOnlyItem(failed) -->
+  </test> <!-- PickupWithOnlyItemV10(failed) -->
 </suite> <!-- Failed suite [Regression] -->
