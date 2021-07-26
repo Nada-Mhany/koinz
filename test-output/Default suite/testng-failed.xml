@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="androidV10TestCases.PickupWithOnlyItem">
+      <class name="webTestCases.RedeemGift">
         <methods>
-          <include name="CreateOrder"/>
-          <include name="OpenApp"/>
+          <include name="Redeem"/>
         </methods>
-      </class> <!-- androidV10TestCases.PickupWithOnlyItem -->
+      </class> <!-- webTestCases.RedeemGift -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
