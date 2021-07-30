@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-30T15:32:07 EET" name="Regression" finished-at="2021-07-30T15:34:46 EET" duration-ms="158190">
+  <suite started-at="2021-07-30T17:22:25 EET" name="Default suite" finished-at="2021-07-30T17:23:38 EET" duration-ms="73362">
     <groups>
     </groups>
-    <test started-at="2021-07-30T15:32:07 EET" name="PickupWithOnlyItemV10" finished-at="2021-07-30T15:34:46 EET" duration-ms="158190">
-      <class name="androidV10TestCases.PickupWithOnlyItem">
-        <test-method is-config="true" signature="OpenApp()[pri:0, instance:androidV10TestCases.PickupWithOnlyItem@481a996b]" started-at="2021-07-30T15:32:07 EET" name="OpenApp" finished-at="2021-07-30T15:32:48 EET" duration-ms="40300" status="PASS">
+    <test started-at="2021-07-30T17:22:25 EET" name="Default test" finished-at="2021-07-30T17:23:38 EET" duration-ms="73362">
+      <class name="androidV10TestCases.PickupWithOnlyGift">
+        <test-method is-config="true" signature="OpenApp()[pri:0, instance:androidV10TestCases.PickupWithOnlyGift@4f209819]" started-at="2021-07-30T17:22:25 EET" name="OpenApp" finished-at="2021-07-30T17:23:01 EET" duration-ms="36531" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApp -->
-        <test-method signature="CreateOrder()[pri:0, instance:androidV10TestCases.PickupWithOnlyItem@481a996b]" started-at="2021-07-30T15:32:48 EET" name="CreateOrder" finished-at="2021-07-30T15:34:34 EET" duration-ms="106737" status="PASS">
+        <test-method signature="CreateOrder()[pri:0, instance:androidV10TestCases.PickupWithOnlyGift@4f209819]" started-at="2021-07-30T17:23:01 EET" name="CreateOrder" finished-at="2021-07-30T17:23:38 EET" duration-ms="36779" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateOrder -->
-      </class> <!-- androidV10TestCases.PickupWithOnlyItem -->
-      <class name="webTestCases.AcceptOrderCashier">
-        <test-method signature="CompletedOrder()[pri:0, instance:webTestCases.AcceptOrderCashier@c33b74f]" started-at="2021-07-30T15:34:35 EET" name="CompletedOrder" finished-at="2021-07-30T15:34:46 EET" duration-ms="11093" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CompletedOrder -->
-      </class> <!-- webTestCases.AcceptOrderCashier -->
-    </test> <!-- PickupWithOnlyItemV10 -->
-  </suite> <!-- Regression -->
+      </class> <!-- androidV10TestCases.PickupWithOnlyGift -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

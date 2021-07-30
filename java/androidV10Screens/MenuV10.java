@@ -15,9 +15,8 @@ public class MenuV10 {
 	By AddBasketBtn = By.id("tech.gplanet.shopx:id/add_item_container");
 	By ViewBasketBtn = MobileBy.AndroidUIAutomator("text(\"View Order\")");
 	By GiftBtn = By.id("tech.gplanet.shopx:id/cv_gift_fab");
-	By AddGift = By.xpath(
-			"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.Button");
-	By AddGiftToBascketBtn = By.id("tech.gplanet.shopx:id/tv_enabled_add_to_basket");
+	By AddGift = By.id("tech.gplanet.shopx:id/tv_add_gift");
+	By AddGiftToBascketBtn = By.id("tech.gplanet.shopx:id/tv_add_to_basket");
 	By SearchItem = By.id("tech.gplanet.shopx:id/searchEditText");
 	By SearchIcon = By.id("tech.gplanet.shopx:id/iv_search");
 	By GiftItem = By.id("tech.gplanet.shopx:id/my_points_item");

@@ -1,4 +1,5 @@
 package androidV10TestCases;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -20,7 +21,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class PickupWithOnlyItem {
+public class PickupWithOnlyGift {
 	AndroidDriver<AndroidElement> driver;
 
 	@BeforeTest
@@ -36,6 +37,7 @@ public class PickupWithOnlyItem {
 		LoginScreenV10 loginscreen = new LoginScreenV10(driver);
 		loginscreen.CountrySelect();
 		loginscreen.Login();
+
 	}
 	@Test
 	public void CreateOrder() {
@@ -47,32 +49,19 @@ public class PickupWithOnlyItem {
 		SelectBranchV10 selectBranch = new SelectBranchV10(driver);
 		selectBranch.SelectBranch();
 		MenuV10 menu = new MenuV10(driver);
-		menu.SearchMenuItem();
-		menu.AddMenuItem();
+		menu.AddGift();
 		menu.ViewBasket();
 		BasketV10 basket = new BasketV10(driver);
 		basket.ViewOrder();
 		CheckoutV10 checkout = new CheckoutV10(driver);
 		checkout.Order();
-
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		AndroidElement OrderIDFull = driver.findElement(By.id("tech.gplanet.shopx:id/order_id_tv"));
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		System.out.println(OrderIDFull.getText());
 		String OrderID = OrderIDFull.getText();
 		OrderScreen.OrderCode = OrderID;
-
-		//System.out.println(OrderID);
-		// String OrderID = "1000";
-//		OrderScreen.OrderCode = OrderID;
-//		String OrderSummary = "Order summary";
-//		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+OrderSummary+"\").instance(0))").click();
-//		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"Total\").instance(0))").click();
-//
-		//AndroidElement OrderPoints = driver.findElement(By.id("tech.gplanet.shopx:id/order_id_tv"));
-		//System.out.println(OrderPoints.getText());
-		//To do: OrderPoints should be printed then assert with the class OnlinePointRec
-
 	}
+	
 
 }
