@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Regression]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="PickupWithOnlyItemV10(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="androidV10TestCases.PickupWithOnlyItem">
         <methods>
@@ -9,11 +9,6 @@
           <include name="OpenApp"/>
         </methods>
       </class> <!-- androidV10TestCases.PickupWithOnlyItem -->
-      <class name="webTestCases.AcceptOrderCashier">
-        <methods>
-          <include name="CompletedOrder"/>
-        </methods>
-      </class> <!-- webTestCases.AcceptOrderCashier -->
     </classes>
-  </test> <!-- PickupWithOnlyItemV10(failed) -->
-</suite> <!-- Failed suite [Regression] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

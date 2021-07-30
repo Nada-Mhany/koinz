@@ -26,11 +26,11 @@ public class PickupWithOnlyItem {
 	@BeforeTest
 	public void OpenApp() throws MalformedURLException {
 		DesiredCapabilities caps = new DesiredCapabilities();
-
+		caps.setCapability("avdArgs", "-no-window");
+		caps.setCapability("isHeadless", true);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Koinz");
 		// caps.setCapability(MobileCapabilityType.APP,"C:\\Users\\user\\eclipse-workspace\\Admin\\app-debug.apk");
 		caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "\\koinz_dev.apk");
-
 		driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		LoginScreenV10 loginscreen = new LoginScreenV10(driver);
@@ -54,22 +54,27 @@ public class PickupWithOnlyItem {
 		basket.ViewOrder();
 		CheckoutV10 checkout = new CheckoutV10(driver);
 		checkout.Order();
-		AndroidElement OrderIDFull = driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code"));
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		AndroidElement OrderIDFull = driver.findElement(By.id("tech.gplanet.shopx:id/order_id_tv"));
 //		assertEquals(driver.findElement(By.id("tech.gplanet.shopx:id/tv_order_code")).getText().contains("Order ID"),
 //				true);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
 		System.out.println(OrderIDFull.getText());
 		String OrderID = OrderIDFull.getText();
 		OrderScreen.OrderCode = OrderID;
 
-		// System.out.println(OrderID);
+		//System.out.println(OrderID);
 		// String OrderID = "1000";
 //		OrderScreen.OrderCode = OrderID;
 //		String OrderSummary = "Order summary";
 //		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+OrderSummary+"\").instance(0))").click();
 //		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"Total\").instance(0))").click();
 //
-//		AndroidElement OrderPoints = driver.findElement(By.id("tech.gplanet.shopx:id/tv_added_points"));
-//		System.out.println(OrderPoints.getText());
+		//AndroidElement OrderPoints = driver.findElement(By.id("tech.gplanet.shopx:id/order_id_tv"));
+		//System.out.println(OrderPoints.getText());
 		//To do: OrderPoints should be printed then assert with the class OnlinePointRec
 
 	}
